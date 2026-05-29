@@ -1,130 +1,199 @@
+"use client";
+
+import { motion } from "framer-motion";
+
+const container = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const item = {
+  hidden: {
+    opacity: 0,
+    y: 40,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+  },
+};
+
 export default function Contact() {
   return (
     <section className="w-full min-h-screen bg-black text-white px-6 py-20 flex items-center">
-      
-      <div className="w-full grid md:grid-cols-2 gap-16 items-center">
+
+      <motion.div
+        className="w-full grid md:grid-cols-2 gap-16 items-center"
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+      >
 
         {/* Left Side */}
-        <div>
-          <p className="text-purple-400 text-lg mb-4">
+        <motion.div variants={item}>
+
+          <motion.p
+            variants={item}
+            className="text-purple-400 text-lg mb-4"
+          >
             Contact Me
-          </p>
+          </motion.p>
 
-          <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+          <motion.h2
+            variants={item}
+            className="text-4xl md:text-5xl font-bold leading-tight"
+          >
             Let’s Build Your Shopify Store
-          </h2>
+          </motion.h2>
 
-          <p className="text-gray-400 mt-6 text-lg leading-8">
+          <motion.p
+            variants={item}
+            className="text-gray-400 mt-6 text-lg leading-8"
+          >
             Have a Shopify project or ecommerce idea in mind?
             I’d love to help you create a modern, high-converting online store.
-          </p>
+          </motion.p>
 
-          <div className="mt-10 space-y-6">
+          {/* Contact Info */}
+          <motion.div
+            variants={item}
+            className="mt-10 space-y-6"
+          >
 
-            <div>
-              <h3 className="text-xl font-semibold">
-                Email
-              </h3>
+            {[
+              {
+                title: "Email",
+                value: "john@example.com",
+              },
+              {
+                title: "Location",
+                value: "India",
+              },
+              {
+                title: "Availability",
+                value: "Available for freelance projects",
+              },
+            ].map((info, index) => (
+              <motion.div
+                key={index}
+                whileHover={{
+                  x: 10,
+                }}
+                transition={{
+                  type: "spring",
+                  stiffness: 120,
+                }}
+              >
 
-              <p className="text-gray-400 mt-2">
-                john@example.com
-              </p>
-            </div>
+                <h3 className="text-xl font-semibold">
+                  {info.title}
+                </h3>
 
-            <div>
-              <h3 className="text-xl font-semibold">
-                Location
-              </h3>
+                <p className="text-gray-400 mt-2">
+                  {info.value}
+                </p>
 
-              <p className="text-gray-400 mt-2">
-                India
-              </p>
-            </div>
+              </motion.div>
+            ))}
 
-            <div>
-              <h3 className="text-xl font-semibold">
-                Availability
-              </h3>
+          </motion.div>
 
-              <p className="text-gray-400 mt-2">
-                Available for freelance projects
-              </p>
-            </div>
-
-          </div>
-        </div>
+        </motion.div>
 
         {/* Right Side - Form */}
-        <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 w-full">
+        <motion.div
+          variants={item}
+          whileHover={{
+            y: -5,
+          }}
+          className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 w-full"
+        >
 
           <form className="space-y-6">
 
             {/* Name */}
-            <div>
+            <motion.div variants={item}>
+
               <label className="block mb-2 text-gray-300">
                 Full Name
               </label>
 
-              <input
+              <motion.input
+                whileFocus={{
+                  scale: 1.02,
+                  borderColor: "#a855f7",
+                }}
                 type="text"
                 placeholder="John Doe"
-                className="w-full bg-black border border-zinc-700 rounded-xl px-4 py-3 outline-none focus:border-purple-500"
+                className="w-full bg-black border border-zinc-700 rounded-xl px-4 py-3 outline-none"
               />
-            </div>
-
+            </motion.div>
             {/* Email */}
-            <div>
+            <motion.div variants={item}>
               <label className="block mb-2 text-gray-300">
                 Email Address
               </label>
-
-              <input
+              <motion.input
+                whileFocus={{
+                  scale: 1.02,
+                  borderColor: "#a855f7",
+                }}
                 type="email"
                 placeholder="john@example.com"
-                className="w-full bg-black border border-zinc-700 rounded-xl px-4 py-3 outline-none focus:border-purple-500"
+                className="w-full bg-black border border-zinc-700 rounded-xl px-4 py-3 outline-none"
               />
-            </div>
-
+            </motion.div>
             {/* Project Type */}
-            <div>
+            <motion.div variants={item}>
               <label className="block mb-2 text-gray-300">
                 Project Type
               </label>
-
-              <input
+              <motion.input
+                whileFocus={{
+                  scale: 1.02,
+                  borderColor: "#a855f7",
+                }}
                 type="text"
                 placeholder="Shopify Store Development"
-                className="w-full bg-black border border-zinc-700 rounded-xl px-4 py-3 outline-none focus:border-purple-500"
+                className="w-full bg-black border border-zinc-700 rounded-xl px-4 py-3 outline-none"
               />
-            </div>
-
+            </motion.div>
             {/* Message */}
-            <div>
+            <motion.div variants={item}>
               <label className="block mb-2 text-gray-300">
                 Message
               </label>
-
-              <textarea
+              <motion.textarea
+                whileFocus={{
+                  scale: 1.02,
+                  borderColor: "#a855f7",
+                }}
                 rows={5}
                 placeholder="Tell me about your project..."
-                className="w-full bg-black border border-zinc-700 rounded-xl px-4 py-3 outline-none focus:border-purple-500 resize-none"
+                className="w-full bg-black border border-zinc-700 rounded-xl px-4 py-3 outline-none resize-none"
               />
-            </div>
-
+            </motion.div>
             {/* Button */}
-            <button
+            <motion.button
+              whileHover={{
+                scale: 1.03,
+              }}
+              whileTap={{
+                scale: 0.97,
+              }}
               type="submit"
-              className="w-full bg-white text-black py-4 rounded-xl font-semibold hover:scale-[1.02] transition"
+              className="w-full bg-white text-black py-4 rounded-xl font-semibold"
             >
               Send Message
-            </button>
-
+            </motion.button>
           </form>
-
-        </div>
-
-      </div>
-
+        </motion.div>
+      </motion.div>
     </section>
   );
 }

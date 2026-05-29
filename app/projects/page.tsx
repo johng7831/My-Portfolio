@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 const projects = [
   {
     title: "Fashion Shopify Store",
@@ -19,69 +23,177 @@ const projects = [
   },
 ];
 
+const container = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const item = {
+  hidden: {
+    opacity: 0,
+    y: 50,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+  },
+};
+
 export default function Projects() {
   return (
     <section className="w-full min-h-screen bg-black text-white px-6 py-20">
-      <div className="w-full">
+
+      <motion.div
+        className="w-full"
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+      >
+
         {/* Heading */}
-        <div className="text-center mb-16">
-          <p className="text-purple-400 text-lg mb-4">
+        <motion.div
+          variants={item}
+          className="text-center mb-16"
+        >
+
+          <motion.p
+            variants={item}
+            className="text-purple-400 text-lg mb-4"
+          >
             My Work
-          </p>
-          <h2 className="text-4xl md:text-5xl font-bold">
+          </motion.p>
+
+          <motion.h2
+            variants={item}
+            className="text-4xl md:text-5xl font-bold"
+          >
             Featured Projects
-          </h2>
-          <p className="text-gray-400 mt-6 max-w-3xl mx-auto text-lg leading-8">
+          </motion.h2>
+
+          <motion.p
+            variants={item}
+            className="text-gray-400 mt-6 max-w-3xl mx-auto text-lg leading-8"
+          >
             A collection of Shopify and ecommerce projects focused on
             performance, responsive design, and conversion optimization.
-          </p>
-        </div>
+          </motion.p>
+
+        </motion.div>
+
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div
+          variants={container}
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+
           {projects.map((project, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden hover:-translate-y-2 transition duration-300"
+              variants={item}
+              whileHover={{
+                y: -12,
+                scale: 1.02,
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 120,
+              }}
+              className="bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden group"
             >
+
               {/* Project Image Placeholder */}
-              <div className="h-56 bg-gradient-to-br from-purple-500/20 to-zinc-900 flex items-center justify-center">
-                <span className="text-gray-500">
+              <div className="h-56 bg-gradient-to-br from-purple-500/20 to-zinc-900 flex items-center justify-center overflow-hidden">
+
+                <motion.span
+                  initial={{ opacity: 0.6 }}
+                  whileHover={{
+                    scale: 1.1,
+                    opacity: 1,
+                  }}
+                  className="text-gray-500 text-lg"
+                >
                   Project Preview
-                </span>
+                </motion.span>
+
               </div>
+
               {/* Content */}
               <div className="p-6">
-                <h3 className="text-2xl font-semibold">
+
+                <motion.h3
+                  whileHover={{ x: 5 }}
+                  className="text-2xl font-semibold"
+                >
                   {project.title}
-                </h3>
+                </motion.h3>
+
                 <p className="text-gray-400 mt-4 leading-7">
                   {project.description}
                 </p>
+
                 {/* Tech Stack */}
                 <div className="flex flex-wrap gap-3 mt-6">
+
                   {project.tech.map((item, i) => (
-                    <span
+                    <motion.span
                       key={i}
-                      className="border border-zinc-700 px-3 py-1 rounded-full text-sm"
+                      whileHover={{
+                        scale: 1.08,
+                        borderColor: "#a855f7",
+                      }}
+                      className="border border-zinc-700 px-3 py-1 rounded-full text-sm cursor-pointer transition-all"
                     >
                       {item}
-                    </span>
+                    </motion.span>
                   ))}
+
                 </div>
+
                 {/* Buttons */}
                 <div className="flex gap-4 mt-8">
-                  <button className="bg-white text-black px-5 py-2 rounded-full font-medium hover:scale-105 transition">
+
+                  <motion.button
+                    whileHover={{
+                      scale: 1.05,
+                    }}
+                    whileTap={{
+                      scale: 0.95,
+                    }}
+                    className="bg-white text-black px-5 py-2 rounded-full font-medium"
+                  >
                     Live Demo
-                  </button>
-                  <button className="border border-zinc-700 px-5 py-2 rounded-full hover:bg-white hover:text-black transition">
+                  </motion.button>
+
+                  <motion.button
+                    whileHover={{
+                      scale: 1.05,
+                      backgroundColor: "#ffffff",
+                      color: "#000000",
+                    }}
+                    whileTap={{
+                      scale: 0.95,
+                    }}
+                    className="border border-zinc-700 px-5 py-2 rounded-full"
+                  >
                     Code
-                  </button>
+                  </motion.button>
+
                 </div>
+
               </div>
-            </div>
+
+            </motion.div>
           ))}
-        </div>
-      </div>
+
+        </motion.div>
+
+      </motion.div>
+
     </section>
   );
 }
