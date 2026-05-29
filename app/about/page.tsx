@@ -1,7 +1,8 @@
 export default function About() {
   return (
-    <section className="min-h-screen bg-black text-white px-6 py-20 flex items-center">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+    <section className="w-full min-h-screen bg-black text-white px-6 py-20 flex items-center">
+      
+      <div className="w-full grid md:grid-cols-2 gap-16 items-center">
 
         {/* Left Side */}
         <div>
@@ -92,6 +93,7 @@ export default function About() {
           </div>
 
         </div>
+
       </div>
     </section>
   );

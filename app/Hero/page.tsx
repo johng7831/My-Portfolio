@@ -1,7 +1,8 @@
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-black text-white px-6">
-      <div className="max-w-4xl text-center">
+    <section className="w-full min-h-screen bg-black text-white flex items-center justify-center px-6">
+      
+      <div className="w-full text-center">
         
         <p className="text-purple-400 text-lg mb-4">
           Shopify Developer • 2+ Years Experience
@@ -15,12 +16,14 @@ export default function Hero() {
           I Build Modern Shopify Stores
         </h2>
 
-        <p className="text-gray-400 text-lg mt-6 max-w-2xl mx-auto">
-          Shopify Developer specializing in custom themes, 
-          ecommerce UI/UX, performance optimization, and 
+        <p className="text-gray-400 text-lg mt-6 max-w-3xl mx-auto leading-relaxed">
+          Shopify Developer specializing in custom themes,
+          ecommerce UI/UX, performance optimization, and
           conversion-focused storefronts.
         </p>
+
       </div>
+
     </section>
   );
 }

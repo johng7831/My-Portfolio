@@ -1,7 +1,8 @@
 export default function Contact() {
   return (
-    <section className="min-h-screen bg-black text-white px-6 py-20 flex items-center">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+    <section className="w-full min-h-screen bg-black text-white px-6 py-20 flex items-center">
+      
+      <div className="w-full grid md:grid-cols-2 gap-16 items-center">
 
         {/* Left Side */}
         <div>
@@ -54,7 +55,7 @@ export default function Contact() {
         </div>
 
         {/* Right Side - Form */}
-        <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
+        <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 w-full">
 
           <form className="space-y-6">
 
@@ -119,9 +120,11 @@ export default function Contact() {
             </button>
 
           </form>
+
         </div>
 
       </div>
+
     </section>
   );
 }
