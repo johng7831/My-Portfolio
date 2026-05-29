@@ -89,7 +89,7 @@ export default function Contact() {
               Phone
             </h3>
             <p className="text-white/40 mt-2 text-sm">
-              +91 98765 43210
+              +91 78764 60270
             </p>
           </motion.div>
 
@@ -99,7 +99,7 @@ export default function Contact() {
               Email
             </h3>
             <p className="text-white/40 mt-2 text-sm">
-              john@example.com
+              johng7831@gamil.com
             </p>
           </motion.div>
 
