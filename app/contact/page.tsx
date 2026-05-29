@@ -6,193 +6,119 @@ const container = {
   hidden: {},
   show: {
     transition: {
-      staggerChildren: 0.2,
+      staggerChildren: 0.18,
     },
   },
 };
 
 const item = {
-  hidden: {
-    opacity: 0,
-    y: 40,
-  },
-  show: {
-    opacity: 1,
-    y: 0,
-  },
+  hidden: { opacity: 0, y: 30 },
+  show: { opacity: 1, y: 0 },
 };
 
 export default function Contact() {
   return (
-    <section className="w-full min-h-screen bg-black text-white px-6 py-20 flex items-center">
+    <section className="relative w-full min-h-screen bg-[#080808] text-white px-6 py-24 flex items-center overflow-hidden">
+
+      {/* Grid background */}
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(120,80,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(120,80,255,0.04) 1px, transparent 1px)",
+          backgroundSize: "48px 48px",
+        }}
+      />
+
+      {/* Glow */}
+      <div
+        className="pointer-events-none absolute left-1/2 -translate-x-1/2 top-0 w-[650px] h-[420px]"
+        style={{
+          background:
+            "radial-gradient(ellipse at center, rgba(110,60,255,0.18) 0%, transparent 70%)",
+        }}
+      />
 
       <motion.div
-        className="w-full grid md:grid-cols-2 gap-16 items-center"
+        className="relative z-10 w-full max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center"
         variants={container}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
       >
 
-        {/* Left Side */}
+        {/* LEFT SIDE */}
         <motion.div variants={item}>
-
-          <motion.p
-            variants={item}
-            className="text-purple-400 text-lg mb-4"
-          >
+          <p className="text-violet-400 text-sm tracking-widest uppercase mb-4">
             Contact Me
-          </motion.p>
+          </p>
 
-          <motion.h2
-            variants={item}
-            className="text-4xl md:text-5xl font-bold leading-tight"
+          <h2
+            className="font-extrabold leading-tight mb-6"
+            style={{
+              fontFamily: "'Syne', sans-serif",
+              fontSize: "clamp(34px, 5vw, 56px)",
+              letterSpacing: "-1px",
+            }}
           >
-            Let’s Build Your Shopify Store
-          </motion.h2>
+            Let’s Build Something That Converts
+          </h2>
 
-          <motion.p
-            variants={item}
-            className="text-gray-400 mt-6 text-lg leading-8"
-          >
-            Have a Shopify project or ecommerce idea in mind?
-            I’d love to help you create a modern, high-converting online store.
-          </motion.p>
+          <p className="text-white/50 text-lg leading-8 mb-4">
+            Have a Shopify project, ecommerce idea, or need a developer for your store?
+          </p>
 
-          {/* Contact Info */}
-          <motion.div
-            variants={item}
-            className="mt-10 space-y-6"
-          >
+          <p className="text-white/40 text-lg leading-8">
+            I’m available for freelance work and long-term collaborations focused on
+            performance, UX, and conversion-driven design.
+          </p>
+        </motion.div>
 
-            {[
-              {
-                title: "Email",
-                value: "john@example.com",
-              },
-              {
-                title: "Location",
-                value: "India",
-              },
-              {
-                title: "Availability",
-                value: "Available for freelance projects",
-              },
-            ].map((info, index) => (
-              <motion.div
-                key={index}
-                whileHover={{
-                  x: 10,
-                }}
-                transition={{
-                  type: "spring",
-                  stiffness: 120,
-                }}
-              >
+        {/* RIGHT SIDE */}
+        <motion.div
+          variants={item}
+          className="relative rounded-3xl border border-white/10 bg-white/5 backdrop-blur-md p-10 space-y-10 overflow-hidden"
+        >
 
-                <h3 className="text-xl font-semibold">
-                  {info.title}
-                </h3>
+          {/* glow overlay */}
+          <div className="absolute inset-0 opacity-0 hover:opacity-100 transition bg-gradient-to-br from-violet-500/10 to-transparent" />
 
-                <p className="text-gray-400 mt-2">
-                  {info.value}
-                </p>
+          {/* Phone */}
+          <motion.div whileHover={{ x: 8 }} className="relative z-10">
+            <h3 className="text-lg font-semibold text-white">
+              Phone
+            </h3>
+            <p className="text-white/40 mt-2 text-sm">
+              +91 98765 43210
+            </p>
+          </motion.div>
 
-              </motion.div>
-            ))}
+          {/* Email */}
+          <motion.div whileHover={{ x: 8 }} className="relative z-10">
+            <h3 className="text-lg font-semibold text-white">
+              Email
+            </h3>
+            <p className="text-white/40 mt-2 text-sm">
+              john@example.com
+            </p>
+          </motion.div>
 
+          {/* LinkedIn */}
+          <motion.div whileHover={{ x: 8 }} className="relative z-10">
+            <h3 className="text-lg font-semibold text-white">
+              LinkedIn
+            </h3>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              className="text-violet-400 mt-2 inline-block text-sm hover:text-violet-300 transition"
+            >
+              View Profile →
+            </a>
           </motion.div>
 
         </motion.div>
 
-        {/* Right Side - Form */}
-        <motion.div
-          variants={item}
-          whileHover={{
-            y: -5,
-          }}
-          className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 w-full"
-        >
-
-          <form className="space-y-6">
-
-            {/* Name */}
-            <motion.div variants={item}>
-
-              <label className="block mb-2 text-gray-300">
-                Full Name
-              </label>
-
-              <motion.input
-                whileFocus={{
-                  scale: 1.02,
-                  borderColor: "#a855f7",
-                }}
-                type="text"
-                placeholder="John Doe"
-                className="w-full bg-black border border-zinc-700 rounded-xl px-4 py-3 outline-none"
-              />
-            </motion.div>
-            {/* Email */}
-            <motion.div variants={item}>
-              <label className="block mb-2 text-gray-300">
-                Email Address
-              </label>
-              <motion.input
-                whileFocus={{
-                  scale: 1.02,
-                  borderColor: "#a855f7",
-                }}
-                type="email"
-                placeholder="john@example.com"
-                className="w-full bg-black border border-zinc-700 rounded-xl px-4 py-3 outline-none"
-              />
-            </motion.div>
-            {/* Project Type */}
-            <motion.div variants={item}>
-              <label className="block mb-2 text-gray-300">
-                Project Type
-              </label>
-              <motion.input
-                whileFocus={{
-                  scale: 1.02,
-                  borderColor: "#a855f7",
-                }}
-                type="text"
-                placeholder="Shopify Store Development"
-                className="w-full bg-black border border-zinc-700 rounded-xl px-4 py-3 outline-none"
-              />
-            </motion.div>
-            {/* Message */}
-            <motion.div variants={item}>
-              <label className="block mb-2 text-gray-300">
-                Message
-              </label>
-              <motion.textarea
-                whileFocus={{
-                  scale: 1.02,
-                  borderColor: "#a855f7",
-                }}
-                rows={5}
-                placeholder="Tell me about your project..."
-                className="w-full bg-black border border-zinc-700 rounded-xl px-4 py-3 outline-none resize-none"
-              />
-            </motion.div>
-            {/* Button */}
-            <motion.button
-              whileHover={{
-                scale: 1.03,
-              }}
-              whileTap={{
-                scale: 0.97,
-              }}
-              type="submit"
-              className="w-full bg-white text-black py-4 rounded-xl font-semibold"
-            >
-              Send Message
-            </motion.button>
-          </form>
-        </motion.div>
       </motion.div>
     </section>
   );

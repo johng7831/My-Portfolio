@@ -1,23 +1,37 @@
 @import "tailwindcss";
 
-/* Light mode variables */
+/* ===== Modern Portfolio Theme (Dark First Design System) ===== */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #080808;
+  --foreground: #ffffff;
+
+  --accent: #8b5cf6; /* violet */
+  --muted: rgba(255, 255, 255, 0.6);
+
+  --border: rgba(255, 255, 255, 0.08);
 }
 
-/* Dark mode variables (class-based) */
+/* Force consistent dark theme (no light mode switching) */
 .dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  --background: #080808;
+  --foreground: #ffffff;
+
+  --accent: #8b5cf6;
+  --muted: rgba(255, 255, 255, 0.6);
+  --border: rgba(255, 255, 255, 0.08);
 }
 
-/* Apply theme variables */
+/* Base styles */
+html,
 body {
+  height: 100%;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-  transition: background 0.3s ease, color 0.3s ease;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Smooth scrolling */
@@ -25,10 +39,54 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Smooth transitions globally */
+/* Global transitions (soft + premium feel) */
 * {
   transition:
-    background-color 0.3s ease,
-    color 0.3s ease,
-    border-color 0.3s ease;
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+/* Selection highlight (violet glow feel) */
+::selection {
+  background: rgba(139, 92, 246, 0.25);
+  color: #ffffff;
+}
+
+/* Scrollbar (thin + modern + subtle violet accent) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.35);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.6);
+}
+
+/* Remove default focus ugly outline and replace with clean glow */
+:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.5);
+  border-radius: 6px;
+}
+
+/* Better image rendering */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Optional: smoother text rendering across site */
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.02em;
 }
