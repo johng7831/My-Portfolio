@@ -25,14 +25,12 @@ const item = {
 export default function Hero() {
   return (
     <section className="w-full min-h-screen bg-black text-white flex items-center justify-center px-6">
-      
       <motion.div
         className="w-full text-center"
         variants={container}
         initial="hidden"
         animate="show"
       >
-
         <motion.p
           variants={item}
           transition={{ duration: 0.6 }}
@@ -62,27 +60,49 @@ export default function Hero() {
           transition={{ duration: 0.9 }}
           className="text-gray-400 text-lg mt-6 max-w-3xl mx-auto leading-relaxed"
         >
-          Shopify Developer specializing in custom themes,
-          ecommerce UI/UX, performance optimization, and
-          conversion-focused storefronts.
+          Shopify Developer specializing in custom themes, ecommerce UI/UX,
+          performance optimization, CRO strategies, and high-converting
+          storefront experiences.
         </motion.p>
 
+        {/* CTA BUTTONS */}
         <motion.div
           variants={item}
           transition={{ duration: 1 }}
-          className="mt-10"
+          className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-purple-500 hover:bg-purple-600 px-8 py-3 rounded-xl font-semibold"
+          <a
+            href="#projects"
+            className="px-8 py-3 rounded-full bg-purple-600 hover:bg-purple-700 transition font-medium"
           >
-            View Projects
-          </motion.button>
+            View My Work
+          </a>
+
+          <a
+            href="#contact"
+            className="px-8 py-3 rounded-full border border-gray-500 hover:border-white transition font-medium"
+          >
+            Contact Me
+          </a>
         </motion.div>
 
+        {/* SOCIAL LINKS */}
+        <motion.div
+          variants={item}
+          transition={{ duration: 1.1 }}
+          className="mt-8 flex justify-center gap-6 text-gray-400 text-sm"
+        >
+          <a href="#" className="hover:text-white transition">
+            GitHub
+          </a>
+          <a href="#" className="hover:text-white transition">
+            LinkedIn
+          </a>
+          <a href="#" className="hover:text-white transition">
+            Twitter
+          </a>
+        </motion.div>
       </motion.div>
-
     </section>
   );
 }

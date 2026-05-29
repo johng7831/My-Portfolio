@@ -58,9 +58,9 @@ export default function About() {
             variants={item}
             className="text-gray-400 mt-4 text-lg leading-8"
           >
-            I specialize in Shopify theme customization, Liquid development,
-            performance optimization, and modern frontend experiences using
-            React, Next.js, and Tailwind CSS.
+          I specialize in Shopify theme customization and Liquid development, with a strong focus on performance optimization, SEO best practices, Shopify automation, and building modern, responsive frontend experiences. I work with React, Next.js, and Tailwind CSS to create scalable and maintainable interfaces that are fast, efficient, and search-engine friendly.
+
+          My technical skill set includes JavaScript, TypeScript, Liquid (Shopify’s templating language), jQuery, PHP, AJAX, Shopify APIs, SEO optimization, and Shopify automation workflows. I focus on delivering high-performing, conversion-driven eCommerce solutions with strong attention to performance, scalability, and service-level optimization (SLO).
           </motion.p>
           <motion.p
             variants={item}
@@ -78,8 +78,15 @@ export default function About() {
             {[
               "Shopify",
               "Liquid",
-              "Next.js",
-              "Tailwind CSS",
+              "HTML",
+              "CSS",
+              "Javascript",
+              "Typescript",
+              "Shopify API",
+              "Rest API",
+              "Graphql API",
+              "PHP",
+              "React",
             ].map((skill, index) => (
               <motion.span
                 key={index}
@@ -106,7 +113,7 @@ export default function About() {
               text: "Years Experience",
             },
             {
-              number: "20+",
+              number: "25+",
               text: "Shopify Projects",
             },
             {

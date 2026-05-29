@@ -24,18 +24,25 @@ const projects = [
     tech: ["Next.js", "Shopify", "React"],
   },
   {
-    title: "Book Store Shopify Project - Bonnie Brushes",
+    title: "Affiliate Book Store Website (Amazon Redirect Platform)",
     description:
-      "Creative Shopify store for books and artistic products with a clean shopping experience.",
+      "A responsive book affiliate website designed to showcase curated book collections with direct purchase links to Amazon. The platform allows users to explore recommended books, view brief details, and seamlessly redirect to external shopping pages. The project focuses on clean UI design, product presentation, and smooth user navigation to enhance book discovery and purchasing experience..",
     tech: ["Shopify", "Liquid", "CSS"],
     link: "https://bonniebrushes.com/",
   },
   {
-    title: "Book Store Shopify Project - Hue Coloring",
+    title: "Digital Coloring Book / Printable Coloring Pages Website.",
     description:
-      "Interactive coloring book ecommerce store built for smooth browsing and purchase flow.",
+      "A digital coloring book website that offers printable coloring pages and themed art collections for users of all ages. The platform allows users to explore, download, and print high-quality coloring designs, focusing on creativity, relaxation, and an engaging user experience.",
     tech: ["Shopify", "JavaScript", "CSS"],
     link: "https://huecoloring.com/",
+  },
+  {
+  title: "Voyafly eSIM Platform",
+  description:
+    "A modern eSIM platform enabling users to purchase and activate international eSIM plans instantly. The platform focuses on seamless travel connectivity, fast checkout experience, and mobile-first UX for global users managing digital SIM services.",
+  tech: ["Next.js", "React", "Tailwind", "API Integration"],
+  link: "https://voyafly.com/",
   },
 ];
 
