@@ -63,7 +63,7 @@ const item = {
 
 export default function Projects() {
   return (
-    <section className="relative w-full min-h-screen bg-[#080808] text-white px-6 py-24 overflow-hidden">
+    <section className="relative w-full min-h-screen bg-background text-foreground px-6 py-24 overflow-hidden">
 
       {/* Grid background */}
       <div
@@ -109,7 +109,7 @@ export default function Projects() {
             Featured Projects
           </h2>
 
-          <p className="text-white/50 mt-6 max-w-2xl mx-auto text-lg leading-8">
+          <p className="text-foreground/50 mt-6 max-w-2xl mx-auto text-lg leading-8">
             A collection of Shopify and ecommerce builds focused on performance,
             responsive design, and conversion optimization.
           </p>
@@ -130,7 +130,7 @@ export default function Projects() {
 
               {/* Preview */}
               <div className="h-52 flex items-center justify-center border-b border-white/10">
-                <span className="text-white/30 text-sm tracking-widest">
+                <span className="text-foreground/30 text-sm tracking-widest">
                   PROJECT PREVIEW
                 </span>
               </div>
@@ -141,7 +141,7 @@ export default function Projects() {
                   {project.title}
                 </h3>
 
-                <p className="text-white/40 text-sm leading-7">
+                <p className="text-foreground/40 text-sm leading-7">
                   {project.description}
                 </p>
 
@@ -150,7 +150,7 @@ export default function Projects() {
                   {project.tech.map((tech, i) => (
                     <span
                       key={i}
-                      className="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-white/50 hover:text-white hover:border-violet-400/40 transition"
+                      className="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-foreground/50 hover:text-foreground hover:border-violet-400/40 transition"
                     >
                       {tech}
                     </span>

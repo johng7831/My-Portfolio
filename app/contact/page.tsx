@@ -18,7 +18,7 @@ const item = {
 
 export default function Contact() {
   return (
-    <section className="relative w-full min-h-screen bg-[#080808] text-white px-6 py-24 flex items-center overflow-hidden">
+    <section className="relative w-full min-h-screen bg-background text-foreground px-6 py-24 flex items-center overflow-hidden">
 
       {/* Grid background */}
       <div
@@ -64,11 +64,11 @@ export default function Contact() {
             Let’s Build Something That Converts
           </h2>
 
-          <p className="text-white/50 text-lg leading-8 mb-4">
+          <p className="text-foreground/50 text-lg leading-8 mb-4">
             Have a Shopify project, ecommerce idea, or need a developer for your store?
           </p>
 
-          <p className="text-white/40 text-lg leading-8">
+          <p className="text-foreground/40 text-lg leading-8">
             I’m available for freelance work and long-term collaborations focused on
             performance, UX, and conversion-driven design.
           </p>
@@ -85,27 +85,27 @@ export default function Contact() {
 
           {/* Phone */}
           <motion.div whileHover={{ x: 8 }} className="relative z-10">
-            <h3 className="text-lg font-semibold text-white">
+            <h3 className="text-lg font-semibold text-foreground">
               Phone
             </h3>
-            <p className="text-white/40 mt-2 text-sm">
+            <p className="text-foreground/40 mt-2 text-sm">
               +91 78764 60270
             </p>
           </motion.div>
 
           {/* Email */}
           <motion.div whileHover={{ x: 8 }} className="relative z-10">
-            <h3 className="text-lg font-semibold text-white">
+            <h3 className="text-lg font-semibold text-foreground">
               Email
             </h3>
-            <p className="text-white/40 mt-2 text-sm">
+            <p className="text-foreground/40 mt-2 text-sm">
               johng7831@gamil.com
             </p>
           </motion.div>
 
           {/* LinkedIn */}
           {/* <motion.div whileHover={{ x: 8 }} className="relative z-10">
-            <h3 className="text-lg font-semibold text-white">
+            <h3 className="text-lg font-semibold text-foreground">
               LinkedIn
             </h3>
             <a

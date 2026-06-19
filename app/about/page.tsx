@@ -18,7 +18,7 @@ const item = {
 
 export default function About() {
   return (
-    <section className="relative w-full min-h-screen bg-[#080808] text-white px-6 py-24 flex items-center overflow-hidden">
+    <section className="relative w-full min-h-screen bg-background text-foreground px-6 py-24 flex items-center overflow-hidden">
 
       {/* Grid background (same as hero) */}
       <div
@@ -64,19 +64,19 @@ export default function About() {
             Shopify Developer Crafting High-Converting Ecommerce Stores
           </motion.h2>
 
-          <motion.p className="text-white/50 text-lg leading-8 mb-4">
+          <motion.p className="text-foreground/50 text-lg leading-8 mb-4">
             I’m John, a Shopify Developer with 2+ years of experience building
             responsive, fast, and conversion-focused ecommerce stores.
           </motion.p>
 
-          <motion.p className="text-white/40 text-lg leading-8 mb-4">
+          <motion.p className="text-foreground/40 text-lg leading-8 mb-4">
             I specialize in Shopify theme customization, Liquid development,
             performance optimization, SEO, and modern frontend stacks like
             React, Next.js, and Tailwind CSS. I focus on scalable architecture,
             speed, and clean UI systems.
           </motion.p>
 
-          <motion.p className="text-white/40 text-lg leading-8">
+          <motion.p className="text-foreground/40 text-lg leading-8">
             My goal is to help brands build fast, scalable, and visually refined
             stores that improve conversions and user experience.
           </motion.p>
@@ -100,7 +100,7 @@ export default function About() {
               <motion.span
                 key={index}
                 whileHover={{ scale: 1.08 }}
-                className="px-4 py-2 text-sm rounded-full border border-white/10 bg-white/5 text-white/60 hover:text-white hover:border-violet-400/40 transition"
+                className="px-4 py-2 text-sm rounded-full border border-white/10 bg-white/5 text-foreground/60 hover:text-foreground hover:border-violet-400/40 transition"
               >
                 {skill}
               </motion.span>
@@ -133,7 +133,7 @@ export default function About() {
               <h3 className="text-4xl font-extrabold text-violet-400">
                 {card.number}
               </h3>
-              <p className="text-white/40 mt-2 text-sm tracking-wide">
+              <p className="text-foreground/40 mt-2 text-sm tracking-wide">
                 {card.text}
               </p>
             </motion.div>

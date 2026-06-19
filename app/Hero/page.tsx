@@ -30,7 +30,7 @@ const socials = [
 
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-screen bg-[#080808] text-white overflow-hidden flex flex-col">
+    <section className="relative w-full min-h-screen bg-background text-foreground overflow-hidden flex flex-col">
 
       {/* Grid background */}
       <div
@@ -85,21 +85,21 @@ export default function Hero() {
         <motion.p
           variants={item}
           transition={{ duration: 0.65 }}
-          className="text-white/50 mb-6"
+          className="text-foreground/50 mb-6"
           style={{
             fontFamily: "'Syne', sans-serif",
             fontSize: "clamp(20px, 4vw, 36px)",
             letterSpacing: "-0.5px",
           }}
         >
-          I build <strong className="text-white/90 font-bold">modern Shopify stores</strong> that convert
+          I build <strong className="text-foreground/90 font-bold">modern Shopify stores</strong> that convert
         </motion.p>
 
         {/* Description */}
         <motion.p
           variants={item}
           transition={{ duration: 0.7 }}
-          className="text-white/35 text-[15px] font-light max-w-lg mx-auto leading-relaxed mb-10"
+          className="text-foreground/35 text-[15px] font-light max-w-lg mx-auto leading-relaxed mb-10"
         >
           Shopify developer specializing in custom themes, ecommerce UI/UX,
           performance optimization, CRO strategies, and high-converting storefront experiences.
@@ -115,7 +115,7 @@ export default function Hero() {
             <div key={s.label} className="flex items-center gap-8">
               <div className="text-center">
                 <div
-                  className="text-white font-extrabold leading-none"
+                  className="text-foreground font-extrabold leading-none"
                   style={{
                     fontFamily: "'Syne', sans-serif",
                     fontSize: "26px",
@@ -124,7 +124,7 @@ export default function Hero() {
                 >
                   <span>{s.num}</span>
                 </div>
-                <div className="text-white/30 text-[11px] tracking-widest uppercase mt-1">
+                <div className="text-foreground/30 text-[11px] tracking-widest uppercase mt-1">
                   {s.label}
                 </div>
               </div>
@@ -150,7 +150,7 @@ export default function Hero() {
 
           <a
              href="/contact"
-            className="px-7 py-3 rounded-full border border-white/15 hover:border-white/40 text-white/70 hover:text-white transition text-sm"
+            className="px-7 py-3 rounded-full border border-white/15 hover:border-white/40 text-foreground/70 hover:text-foreground transition text-sm"
           >
             Contact me
           </a>
@@ -166,7 +166,7 @@ export default function Hero() {
             <a
               key={s.label}
               href={s.href}
-              className="text-white/30 hover:text-violet-400 text-sm transition-colors"
+              className="text-foreground/30 hover:text-violet-400 text-sm transition-colors"
             >
               {s.label}
             </a>

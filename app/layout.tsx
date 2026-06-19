@@ -1,5 +1,4 @@
 import "./globals.css";
-import Navbar from "./components/Navbar";
 import { Providers } from "./components/theme-provider";
 import ThemeToggle from "./components/theme-toggle";
 
@@ -15,10 +14,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="bg-[#080808] text-white overflow-x-hidden">
+      <body className="bg-background text-foreground overflow-x-hidden">
         <Providers>
           {/* NAVBAR */}
-          <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-black/40 border-b border-white/5">
+          <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-background/80 border-b border-foreground/10">
             <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
               {/* Logo */}
               <a
@@ -30,16 +29,16 @@ export default function RootLayout({
               </a>
               {/* Links */}
               <div className="hidden md:flex items-center gap-8 text-sm">
-                <a href="/" className="text-white/50 hover:text-white transition">
+                <a href="/" className="text-foreground/50 hover:text-foreground transition">
                   Home
                 </a>
-                <a href="/about" className="text-white/50 hover:text-white transition">
+                <a href="/about" className="text-foreground/50 hover:text-foreground transition">
                   About
                 </a>
-                <a href="/projects" className="text-white/50 hover:text-white transition">
+                <a href="/projects" className="text-foreground/50 hover:text-foreground transition">
                   Projects
                 </a>
-                <a href="/contact" className="text-white/50 hover:text-white transition">
+                <a href="/contact" className="text-foreground/50 hover:text-foreground transition">
                   Contact
                 </a>
               </div>
@@ -55,7 +54,6 @@ export default function RootLayout({
               </div>
             </div>
           </nav>
-             <Navbar />
           <main className="pt-24">
             {children}
           </main>
