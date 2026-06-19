@@ -6,42 +6,42 @@ const projects = [
   {
     title: "Fashion Shopify Store",
     description:
-      "Custom Shopify storefront with responsive design, product filtering, and optimized checkout experience.",
+    "Developed a responsive Shopify fashion eCommerce store with custom theme design to showcase clothing and accessories. Implemented product collections, filtering, cart, secure checkout, and payment setup. Configured shipping, taxes, and promotional sections while optimizing performance and ensuring a smooth, mobile-friendly shopping experience.",
     tech: ["Shopify", "Liquid", "JavaScript", "Shopify API"],
     link: "https://properstreetwear.com/",
   },
   {
     title: "Purebred Kittens Marketplace",
     description:
-      "Marketplace-style ecommerce platform with smooth UX and product browsing experience.",
+      "Developed a global online platform, Purebred Kitties, that connects cat lovers with ethical breeders offering purebred kittens. The platform features detailed breed listings, kitten profiles, and health assurance to help users find healthy and well-bred pets. It provides a seamless adoption experience with breed selection, secure browsing, and end-to-end support for shipping and adoption, making the process simple, transparent, and accessible worldwide.",
     tech: ["Shopify", "Liquid", "JavaScript", "HTML", "CSS"],
     link: "https://purebredkitties.com/",
   },
   {
     title: "Beauty Brand Ecommerce",
     description:
-      "Modern ecommerce experience focused on conversion optimization and mobile-first UI.",
+      "Developed a modern and responsive beauty brand eCommerce store showcasing skincare and cosmetic products with an engaging UI. Implemented product collections, filtering, cart, secure checkout, and payment integration. Configured shipping, taxes, and promotional banners while optimizing performance to ensure a smooth, mobile-friendly shopping experience.",
     tech: ["Shopify", "Liquid", "JavaScript", "HTML", "CSS"],
     link: "https://cosmetix.com.au/",
   },
   {
     title: "Affiliate Book Store",
     description:
-      "Curated book platform with Amazon redirects, optimized discovery flow and clean UI experience.",
+      "Developed a curated book discovery platform with a clean, user-friendly interface and optimized browsing experience. Implemented categorized listings, search and filtering features, and seamless Amazon affiliate redirects for purchase. Focused on improving content discovery flow and performance to provide users with an engaging and efficient way to explore books.",
     tech: ["Shopify", "Liquid", "JavaScript", "HTML", "CSS"],
     link: "https://bonniebrushes.com/",
   },
   {
     title: "Digital Coloring Platform",
     description:
-      "Printable coloring pages website focused on creativity, downloads, and smooth user experience.",
+      "Developed a responsive printable coloring pages website focused on creativity, easy downloads, and a smooth user experience. Implemented categorized coloring collections, search and filtering, preview functionality, and one-click downloads. Optimized the platform for fast performance and mobile-friendly browsing to provide an engaging and seamless experience for users of all ages.",
     tech: ["Shopify", "Liquid", "JavaScript", "HTML", "CSS"],
     link: "https://huecoloring.com/",
   },
   {
     title: "Voyafly eSIM Platform",
     description:
-      "Global eSIM platform with instant activation, fast checkout, and mobile-first travel UX.",
+      "Developed a global eSIM platform with instant activation, fast checkout, and a mobile-first travel-focused user experience. Implemented plan selection, country-based eSIM browsing, secure payment integration, and automated activation flow. Optimized the platform for speed, responsiveness, and seamless usability to support travelers with quick and reliable connectivity worldwide.",
     tech: ["Shopify", "Liquid", "React", "Tailwind", "API Integration"],
     link: "https://voyafly.com/",
   },
@@ -170,9 +170,7 @@ export default function Projects() {
                     </a>
                   )}
 
-                  <button className="px-5 py-2 rounded-full border border-white/10 text-white/60 hover:text-white hover:border-white/30 transition text-sm">
-                    Code
-                  </button>
+                  
                 </div>
               </div>
             </motion.div>

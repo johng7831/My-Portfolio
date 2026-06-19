@@ -18,7 +18,7 @@ const item = {
 
 const stats = [
   { num: "40+", label: "Stores Built" },
-  { num: "2+", label: "Years Exp." },
+  { num: "4+", label: "Years Exp." },
   { num: "98%", label: "Satisfaction" },
 ];
 
@@ -65,7 +65,7 @@ export default function Hero() {
           className="inline-flex items-center gap-2 text-violet-400 text-xs tracking-wide px-4 py-1.5 rounded-full border border-violet-400/30 bg-violet-400/10 mb-8"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-violet-400 animate-pulse" />
-          Available for projects · 2+ years Shopify
+          Available for projects · 4+ years Shopify
         </motion.div>
 
         {/* Name */}
@@ -142,14 +142,14 @@ export default function Hero() {
           className="flex flex-col sm:flex-row items-center gap-3 mb-8"
         >
           <a
-            href="#projects"
+             href="/projects"
             className="px-7 py-3 rounded-full bg-violet-700 hover:bg-violet-600 transition-colors text-sm font-medium"
           >
             View my work
           </a>
 
           <a
-            href="#contact"
+             href="/contact"
             className="px-7 py-3 rounded-full border border-white/15 hover:border-white/40 text-white/70 hover:text-white transition text-sm"
           >
             Contact me

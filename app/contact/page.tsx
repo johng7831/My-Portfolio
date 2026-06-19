@@ -104,7 +104,7 @@ export default function Contact() {
           </motion.div>
 
           {/* LinkedIn */}
-          <motion.div whileHover={{ x: 8 }} className="relative z-10">
+          {/* <motion.div whileHover={{ x: 8 }} className="relative z-10">
             <h3 className="text-lg font-semibold text-white">
               LinkedIn
             </h3>
@@ -115,7 +115,7 @@ export default function Contact() {
             >
               View Profile →
             </a>
-          </motion.div>
+          </motion.div> */}
 
         </motion.div>
 
