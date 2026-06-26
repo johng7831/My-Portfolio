@@ -114,8 +114,8 @@ export default function About() {
           className="grid grid-cols-2 gap-6"
         >
           {[
-            { number: "4+", text: "Years Experience" },
-            { number: "40+", text: "Shopify Projects" },
+            { number: "2+", text: "Years Experience" },
+            { number: "25+", text: "Shopify Projects" },
             { number: "95+", text: "Lighthouse Score" },
             { number: "100%", text: "Responsive Design" },
           ].map((card, index) => (

@@ -17,8 +17,8 @@ const item = {
 };
 
 const stats = [
-  { num: "40+", label: "Stores Built" },
-  { num: "4+", label: "Years Exp." },
+  { num: "25+", label: "Stores Built" },
+  { num: "2+", label: "Years Exp." },
   { num: "98%", label: "Satisfaction" },
 ];
 
@@ -65,7 +65,7 @@ export default function Hero() {
           className="inline-flex items-center gap-2 text-violet-400 text-xs tracking-wide px-4 py-1.5 rounded-full border border-violet-400/30 bg-violet-400/10 mb-8"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-violet-400 animate-pulse" />
-          Available for projects · 4+ years Shopify
+          2+ Years of Experience in Shopify
         </motion.div>
 
         {/* Name */}
