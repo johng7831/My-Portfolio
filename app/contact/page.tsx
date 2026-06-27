@@ -69,9 +69,12 @@ export default function Contact() {
           </p>
 
           <p className="text-foreground/40 text-lg leading-8">
-            I’m available for freelance work and long-term collaborations focused on
-            performance, UX, and conversion-driven design.
+            I specialize in developing modern, high-performance Shopify stores with a focus on
+           custom features, seamless user experience, responsive design, and conversion
+          optimization.
           </p>
+
+
         </motion.div>
 
         {/* RIGHT SIDE */}
